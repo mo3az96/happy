@@ -2,6 +2,10 @@ $(window).on("load", function () {
   sal({
     once: true,
   });
+
+  $("body").addClass("overflow");
+  $(".modal-overlay, .hs-modal-cont").fadeIn(200);
+  $(".hs-modal").addClass("active");
 });
 $(document).ready(function () {
   var swiper = new Swiper(".reviews-slider .reviewSwiper", {
@@ -62,4 +66,10 @@ $(document).ready(function () {
       $(".footer-head").not(this).siblings().slideUp(500);
     });
   }
+
+  $(".modal-overlay, .modal-btn").on("click", function (e) {
+    $("body").removeClass("overflow");
+    $(".modal-overlay, .hs-modal-cont").fadeOut(400);
+    $(".hs-modal").removeClass("active");
+  });
 });
