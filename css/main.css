@@ -1047,8 +1047,13 @@ footer:after {
   transition: all 0.3s ease-in-out;
 }
 .hs-modal .icon {
-  fill: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 17px;
+}
+.hs-modal .icon svg {
+  width: 75px;
 }
 .hs-modal .modal-content {
   font-size: 18px;
